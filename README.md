@@ -18,6 +18,7 @@ HTML
 
 ## ERD
 
+![ERD](ERD.png)
 
 ## Functionality
 
