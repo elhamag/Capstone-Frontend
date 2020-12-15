@@ -19,7 +19,7 @@ Welcome to my App, RacingNews gathers the information about your favorite Cars, 
 
 ## ERD Diagram:
 
-![ERD](./ERD-frontend.png)
+![ERD](./ERD-F.png)
 
 ## App Components
 
