@@ -1,7 +1,7 @@
 # Capstone_Project
 
 ## Introduction:
-Welcome to my App, RacingNews gathers the information about your favorite Cars, Drivers and teams in the most recent races around the world. Click on the name of any individual driver car or team to view their page full of latest information about them. Once you create an account, you may add teams and players then click on the 'My Feed' tab to view a list of them.
+Welcome to my App, Event Planning gathers all the most recent events around the U.S. Click on the name of any individual locations/cities view the event. Once you create an account, you may add more events and locations then you can always savethoes events on your profile.
 
 ## Technologies:
 * Node.js
