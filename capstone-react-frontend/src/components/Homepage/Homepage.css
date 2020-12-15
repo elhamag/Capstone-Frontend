@@ -1,16 +1,128 @@
 button{
     margin:2px;
 }
-/* .header{
-    width: 100%;
-    max-height: 100%;
-    display: flex;
-} */
+html,body * { 
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif; 
+    color:inherit;
+    /* background-color:inherit; */
+ }
+
 .App-main1{
-    background-image: url("https://www.itl.cat/pngfile/big/11-119410_beach-landscape-with-palm-tree-palm-trees-and.jpg");
+    background-image: url("https://media.cntraveler.com/photos/5ca60f526176238ca7684bdb/master/w_1600%2Cc_limit/Lucerne%2C-Switzerland_GettyImages-1082381946.jpg");
     width: 100vw;
-    height: 100vh;
-    background-size: cover;
+    height: 94vh;
+    background-size:  cover;
+    background-position:center center;
     background-repeat: no-repeat;
-    
+    margin-top: -80px;
+    /* filter: blur(4px);
+  -webkit-filter: blur(4px); */
+}
+.App-main2{
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+.welcome{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(233, 225, 225);
+}
+.welcome-box{
+        /* background-color: rgb(255, 255, 255); */
+
+        background-color: rgba(116, 116, 116, 0.45);
+        /* border-radius: 10px; */
+        padding: 20px;
+        width: 50%;
+        height: 40%;
+        margin-left: 400px;
+        margin-top: 100px;
+        }
+.welcome-box1{
+    font-size: 20px;
+    padding: 0.35em 1.2em;  
+    border: 0.1em solid #FFFFFF;  
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: black;
+    text-align:center;
+    transition: all 0.2s;
+    display:inline-block;
+    cursor: pointer;
+}
+.welcome-box1:hover{
+    color:rgb(9, 48, 176);
+    background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+    a.welcome-box1{
+        display:block;
+        margin:0.4em auto;
+    }
+    }    
+
+.welcome-box2{
+    font-size: 20px;
+    padding: 0.35em 1.2em;  
+    border: 0.1em solid #FFFFFF;  
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: black;
+    text-align:center;
+    transition: all 0.2s;
+    display:inline-block;
+    cursor: pointer;
+}
+.welcome-box2:hover{
+    color:rgb(9, 48, 176);
+    background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+    a.welcome-box2{
+        display:block;
+        margin:0.4em auto;
+    }
+    }
+
+.welcome-box3{
+    height: 40px;
+    width: 200px;
+    font-size: 14px;
+    /* padding: 0.5em 1.5em;   */
+    border: 0.2em solid #FFFFFF;  
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color: rgb(255, 255, 255);
+    text-align:center;
+    transition: all 0.2s;
+    display:inline-block;
+    background:none ;
+    cursor: pointer;
+}
+.welcome-box3:hover{
+    color:rgb(0, 0, 0);
+    background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+    a.welcome-box3{
+        display:block;
+        margin:0.4em auto;
+    }
+    }
+h3 {
+    color: rgb(237, 228, 228);
 }
