@@ -12,10 +12,10 @@ import Footer from './components/Footer/Footer'
 import { FaUser } from 'react-icons/fa'
 import { FaUserPlus } from 'react-icons/fa'
 import { FaHome } from 'react-icons/fa'
+import Header from './components/Header/Header'
 
 
-
-const backendUrl = "http://localhost:3000/api"
+const backendUrl = "https://elhamproject4.herokuapp.com/api"
 
 class App extends Component {
 constructor(){
@@ -25,12 +25,13 @@ constructor(){
     users: {},
     locations: [],
     userId: null,
+    iplocation: '',
     loggedIn:false
   }
 }
 
 componentDidMount = () => {
-  this.getUsers()
+  this.getUsers();
   this.getLocations()
 }
 
@@ -92,6 +93,7 @@ updateLocation = async (event) => {
   this.getLocations()
 }
 
+
 deleteLocation = async (event) => {
 event.preventDefault()
 
@@ -110,22 +112,27 @@ event.preventDefault()
       name: event.target.name.value,
       email: event.target.name.value,
       username: event.target.name.value,
-      password: event.target.password.value,
+      password: event.target.password.value
     })
-    this.login()
+    this.getUsers()
    
   }
   login= async(event)=>{
+    console.log(event)
     event.preventDefault()
+    console.log(event.target.username.value)
     let response = await axios.post(`${backendUrl}/auth/login`,{
+      
       username: event.target.username.value,
       password: event.target.password.value
     })
-    console.log(response.data.userId)
-    this.setState({
+    console.log(response.data)
+    this.setState({ 
+      
       userId: response.data.userId,
       loggedIn: true
     })
+    
     this.getLocations()
   }
   // Methods: User Profile
@@ -137,22 +144,17 @@ event.preventDefault()
     
   }
 
-
-
 //Methods
   render () {
   return (
     <div className="App">
       <nav className="nav">
-        <Link className="nav-home" to="/"> <FaHome /></Link>
-        <Link className="nav-events" to="/AllLocations">Events</Link>
-        {/* <Link to="/LocationDetail" style={{ marginRight: 1000 }}>Events</Link> */}
+        <Link className="nav-home" to="/"> </Link>
+        {/* <Link className="nav-events" to="/AllLocations">Events</Link>
         <Link className="nav-login" to="/login" ><FaUser />  Login</Link>
-        <Link className="nav-signup" to="/signup"><FaUserPlus /> Signup</Link>
-        
- 
+        <Link className="nav-signup" to="/signup"><FaUserPlus /> Signup</Link> */}
+        <Header {...this.state}{...this.props} logout={this.logout}/>
       </nav>
-
       <main>
         <Switch>
         <Route exact path="/" component={()=>
@@ -161,7 +163,7 @@ event.preventDefault()
         <Route 
           exact
           path="/AllLocations"
-          component={() => <AllLocations locations={this.state.locations} 
+          component={() => <AllLocations locations={this.state.locations} loggedIn = {this.state.loggedIn} 
           addLocation = {this.addLocation}
           deleteLocation = {this.deleteLocation}
           />}
@@ -187,6 +189,7 @@ event.preventDefault()
         <Route path="/*" render={() => <Redirect to="/" />} />
       </Switch>
       </main>
+
 
 
 {/* Footer */}

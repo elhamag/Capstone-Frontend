@@ -1,0 +1,29 @@
+
+/* #header-link{
+    color: rgb(24, 39, 44);
+    margin:5px auto;
+} */
+/* Removes all text decoration from links */
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    cursor:pointer;
+}
+.hello{
+    display: flex;
+    margin-top: -30px;
+    margin-left: 1450px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.hello:hover{
+    color:rgb(164, 161, 161);
+    }
+.hello1{
+    margin-left: -1400px;
+    font-size: 30px;
+    color: white;
+}
+.hello1:hover{
+    color:rgb(164, 161, 161);
+    }

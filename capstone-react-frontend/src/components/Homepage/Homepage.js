@@ -11,11 +11,11 @@ class HomePage extends Component{
                 <div className="App-main2">
                 <br /><br /><br /><br /><br /><br /><br /><br />
                 <div className="welcome-box">
-                    <div className = "welcome">Welcome to Event Planning App</div>
+                    <div className = "welcome">Welcome to Event Planner App</div>
                     <h3> Events around the U.S</h3>
                         <br /><br />
-                        {/* <Link to="/login" ><button className="welcome-box1">Login</button></Link>
-                        <Link to="/signup"><button className="welcome-box2">Signup</button></Link> */}
+                        <Link to="/login" ><button className="welcome-box1">LOGIN</button></Link>
+                        <Link to="/signup"><button className="welcome-box2">SIGNUP</button></Link>
                         <br /><br /><br /><br />
 
                         <Link to="/AllLocations"><button className="welcome-box3">GET STARTED </button></Link>

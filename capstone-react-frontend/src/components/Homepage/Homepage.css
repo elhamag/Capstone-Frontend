@@ -41,54 +41,60 @@ background-color: rgba(0, 0, 0, 0.7);
         margin-top: 100px;
         }
 .welcome-box1{
-    font-size: 20px;
-    padding: 0.35em 1.2em;  
-    border: 0.1em solid #FFFFFF;  
+    height: 40px;
+    width: 200px;
+    font-size: 14px;
+    /* padding: 0.5em 1.5em;   */
+    border: 0.2em solid #FFFFFF;  
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color: black;
+    font-weight:400;
+    color: rgb(255, 255, 255);
     text-align:center;
     transition: all 0.2s;
     display:inline-block;
+    background:none ;
     cursor: pointer;
 }
 .welcome-box1:hover{
-    color:rgb(9, 48, 176);
+    color:rgb(0, 0, 0);
     background-color:#FFFFFF;
     }
     @media all and (max-width:30em){
-    a.welcome-box1{
+    a.welcome-box3{
         display:block;
         margin:0.4em auto;
     }
-    }    
+    }
 
 .welcome-box2{
-    font-size: 20px;
-    padding: 0.35em 1.2em;  
-    border: 0.1em solid #FFFFFF;  
+    height: 40px;
+    width: 200px;
+    font-size: 14px;
+    /* padding: 0.5em 1.5em;   */
+    border: 0.2em solid #FFFFFF;  
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color: black;
+    font-weight:400;
+    color: rgb(255, 255, 255);
     text-align:center;
     transition: all 0.2s;
     display:inline-block;
+    background:none ;
     cursor: pointer;
 }
 .welcome-box2:hover{
-    color:rgb(9, 48, 176);
+    color:rgb(0, 0, 0);
     background-color:#FFFFFF;
     }
     @media all and (max-width:30em){
-    a.welcome-box2{
+    a.welcome-box3{
         display:block;
         margin:0.4em auto;
     }

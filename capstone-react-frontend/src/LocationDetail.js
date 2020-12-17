@@ -9,17 +9,17 @@ class LocationDetail extends Component {
         (location => {
             return location.id === paramsId
         })
-        console.log(locationDetail)
+        // console.log(locationDetail)
      const locationEvents = locationDetail.Events.map(event =>
         {
         return(
                     <tbody>
                         <tr key= {event.id} class="active-row">
-                            <th>{event.name}</th>
-                            <td>{event.description}</td>
-                            <td>{event.location}</td>
-                            <td>{event.capacity}</td>
-                            <td>{event.maxCapacity}</td>
+                            <td className="th7">{event.name}</td>
+                            <td className="th8">{event.description}</td>
+                            <td className="th9">{event.location}</td>
+                            <td className="th10">{event.capacity}</td>
+                            <td className="th11">{event.maxCapacity}</td>
                         </tr>
                     </tbody>
         )    
@@ -46,12 +46,11 @@ class LocationDetail extends Component {
                 <table className="content-table">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Address</th>
-                            <th>Food Serve</th>
-                            <th>Capacity</th>
-                            <th>Maximum Capacity</th>
+                            <th >Name</th>
+                            <th className="th2">Description</th>
+                            <th className="th3">Address</th>
+                            <th className="th5">Capacity</th>
+                            <th className="th6">Maximum Capacity</th>
                         </tr>
                     </thead>
                         <tr class="active-row">{locationEvents}</tr>

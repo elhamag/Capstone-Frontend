@@ -5,6 +5,12 @@ import { FaUser } from 'react-icons/fa';
 import { FaKey } from 'react-icons/fa';
 
 class Login extends Component{
+    handleLogin = (event) => {
+        event.preventDefault()
+        this.props.login(event)
+        this.props.history.push("/AllLocations")
+    }
+
     render(){
         const allUsers = this.props.users;
         
@@ -15,7 +21,7 @@ class Login extends Component{
                 <div className="login-container" >
                 <div>Login</div>
                 <br /><br />
-                    <form className="form-group">
+                    <form onSubmit={this.handleLogin} className="form-group">
                     <div class="input-container">
                     <div class="input-container1"><FaUser /></div> 
                     <input type="text" name="username" placeholder="Username"/><br/>
@@ -29,8 +35,10 @@ class Login extends Component{
                     <input type="hidden" name="loggedIn" value="true"/><br/>
 
                     {/* <!-- Submit button --> */}
+                
                     <input id="submit"  type="submit" value="Login" />
                     </form>
+
                     </div>
                     </div>
                 </div>

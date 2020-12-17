@@ -6,6 +6,11 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaKey } from 'react-icons/fa';
 
 class Signup extends Component{
+  handleSignup = (event) => {
+    event.preventDefault()
+    this.props.signup(event)
+    this.props.history.push("/Login")
+}
     render(){
       const allUsers = this.props.users;
       
@@ -18,7 +23,7 @@ class Signup extends Component{
             < br /><br />
             
             {/* <!-- Sign-up Info --> */}
-            <form className="form-group">
+            <form onSubmit={this.handleSignup} className="form-group">
                 <div class="input-container">
                 <div class="input-container1"><FaUser /></div>           
                 <input type="text" name="username" placeholder="Username"/><br/>
