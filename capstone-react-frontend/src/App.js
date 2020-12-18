@@ -15,8 +15,9 @@ import { FaHome } from 'react-icons/fa'
 import Header from './components/Header/Header'
 
 
-const backendUrl = "https://elhamproject4.herokuapp.com/api"
-
+// const backendUrl = "https://elhamproject4.herokuapp.com/api"
+const backendUrl = "http://localhost:3000/api"
+// https://elhamproject4.herokuapp.com/
 class App extends Component {
 constructor(){
   super()
@@ -75,6 +76,10 @@ addEvent = async (event) => {
   await axios.post(
     `${backendUrl}/locations/${locationId}/newEvent`,{
     name: event.target.name.value,
+    description: event.target.description.value,
+    location: event.target.location.value,
+    capacity: event.target.capacity.value,
+    maxCapacity: event.target.maxCapacity.value,
     locationId: locationId
   })
   this.getLocations()
@@ -120,6 +125,7 @@ event.preventDefault()
   login= async(event)=>{
     console.log(event)
     event.preventDefault()
+    this.setState({ loggedIn : true})
     console.log(event.target.username.value)
     let response = await axios.post(`${backendUrl}/auth/login`,{
       
@@ -130,7 +136,7 @@ event.preventDefault()
     this.setState({ 
       
       userId: response.data.userId,
-      loggedIn: true
+     
     })
     
     this.getLocations()

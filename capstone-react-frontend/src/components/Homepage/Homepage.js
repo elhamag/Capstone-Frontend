@@ -12,7 +12,7 @@ class HomePage extends Component{
                 <br /><br /><br /><br /><br /><br /><br /><br />
                 <div className="welcome-box">
                     <div className = "welcome">Welcome to Event Planner App</div>
-                    <h3> Events around the U.S</h3>
+                    <p>Events around the U.S</p>
                         <br /><br />
                         <Link to="/login" ><button className="welcome-box1">LOGIN</button></Link>
                         <Link to="/signup"><button className="welcome-box2">SIGNUP</button></Link>

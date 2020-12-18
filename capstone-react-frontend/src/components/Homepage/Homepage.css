@@ -11,11 +11,11 @@ html,body * {
 .App-main1{
     background-image: url("https://media.cntraveler.com/photos/5ca60f526176238ca7684bdb/master/w_1600%2Cc_limit/Lucerne%2C-Switzerland_GettyImages-1082381946.jpg");
     width: 100vw;
-    height: 94vh;
+    height: 96vh;
     background-size:  cover;
     background-position:center center;
     background-repeat: no-repeat;
-    margin-top: -80px;
+    margin-top: -105px;
     /* filter: blur(4px);
   -webkit-filter: blur(4px); */
 }
@@ -28,15 +28,20 @@ background-color: rgba(0, 0, 0, 0.7);
     font-size: 50px;
     font-weight: bold;
     color: rgb(233, 225, 225);
+    font-family:fantasy;
+}
+p{
+    font-size: 18px;
+    color: rgb(233, 225, 225);
+    /* font-family:fantasy; */
 }
 .welcome-box{
         /* background-color: rgb(255, 255, 255); */
-
         background-color: rgba(116, 116, 116, 0.45);
         /* border-radius: 10px; */
         padding: 20px;
         width: 50%;
-        height: 40%;
+        height: 45%;
         margin-left: 400px;
         margin-top: 100px;
         }

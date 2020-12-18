@@ -27,22 +27,30 @@ class LocationDetail extends Component {
 
         return(
             <div className="locationdetails">
-                <h1>{locationDetail.name}</h1>
+                <div className="name">
+                    <h1 >{locationDetail.name}</h1>
+                </div>
+                <div className="name1">
+                    <div><h5>Need to Change the City Name!</h5></div>
+                    <div><form onSubmit={this.props.updateLocation}>
+                            <input type="hidden" name="locationId" value={locationDetail.id} />
+                            <input className="edit-box" type="text" name="name" placeholder={locationDetail.name}/>
+                            <input className="edit-button"  type="submit" value="Update Event" />
+                        </form></div>
+                </div>
 
-                <h5>Edit the Event</h5>
-                <form onSubmit={this.props.updateLocation}>
-                    <input type="hidden" name="locationId" value={locationDetail.id} />
-                    <input type="text" name="name" placeholder={locationDetail.name}/>
-                    <input type="submit" value="Update Event" />
-                </form>
-
-                <h5>Add a New Event</h5>
-                <form onSubmit={this.props.addEvent}>
-                    <input type="hidden" name="locationId" value={locationDetail.id} />
-                    <input type="text" name="name" />
-                    <input type="submit" value="Add Event" />
-                </form>
-
+                <div className="add-text"><h5>Create a New Event</h5></div>
+                <div className="add-input-box">
+                        <form onSubmit={this.props.addEvent}>
+                        <input type="hidden" name="locationId" value={locationDetail.id} />
+                        <input className="add-box" type="text" name="name" placeholder="Name" />
+                        <input className="add-box" type="text" name="description" placeholder="Description" />
+                        <input className="add-box" type="text" name="location" placeholder="Location"/>
+                        <input className="add-box" type="number" name="capacity" placeholder="Capacity"/>
+                        <input className="add-box" type="number" name="maxCapacity" placeholder="Maximum Capacity"/>
+                        <input className="add-button" type="submit" value="Add Event" />
+                    </form>
+                </div>
                 <table className="content-table">
                     <thead>
                         <tr>

@@ -31,7 +31,7 @@ class AllLocations extends Component {
             <div className="alllocations">
                 <div className="alllocations-font">All Recent Events</div>
                 <form className="alllocations3" onSubmit={this.props.addLocation} >
-                    <input type="text" name="name" />
+                    <input className="alllocations5" type="text" name="name" />
                     <input className="alllocations2" type="submit" value="Add Location" />
                 </form>
                 {AllLocations}
